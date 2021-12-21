@@ -11,6 +11,8 @@ app.get('/greeting/:name', (req, res) => {
     res.send(`Hello there ${req.params.name}`);
 });
 
+
+// does not work if tip percentage is greater than total
 app.get('/tip/:total/:tipPercentage', (req, res) => {
     console.log(req.params);
     let tip = Math.abs(req.params.tipPercentage / req.params.total) * 100;
